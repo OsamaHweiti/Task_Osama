@@ -33,6 +33,8 @@ Route::get('/blog/{id}', [BlogsController::class, 'showblog'])->name('showblog')
 Route::get('/login', function () {
     return view('Auth.login');
 });
+Route::get('/logout', [UserController::class, 'logout'])->name('logout'); 
+
 Route::post('post-login', [UserController::class, 'Login'])->name('Login'); 
 
 Route::get('/register', function () {
